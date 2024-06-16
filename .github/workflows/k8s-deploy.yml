@@ -53,4 +53,3 @@ jobs:
       run: |
         echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml 
         kubectl apply -f deployment/deployment.yml --kubeconfig=kubeconfig.yaml
-        kubectl config current-context
