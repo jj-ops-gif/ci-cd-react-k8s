@@ -31,7 +31,6 @@ spec:
     spec:
       containers:
       - name: ci-cd-react-k8s
-        restartPolicy: Always
         image: $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
         imagePullPolicy: Always
         ports:
