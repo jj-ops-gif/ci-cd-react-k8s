@@ -46,7 +46,7 @@ jobs:
     - uses: marcofranssen/setup-kubectl@v0.3.0
       id: kubectl
       with:
-        kubectlVersion: latest
+        kubectlVersion: v1.28.9
     - run: echo ${{ steps.kubectl.output.kubectl-version }}
 
     - name: Deploy to Kubernetes
