@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  CONTAINER_REGISTRY: "0987432592345457"
+  IMAGE_NAME: test-react
