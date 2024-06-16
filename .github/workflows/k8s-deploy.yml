@@ -52,4 +52,5 @@ jobs:
     - name: Deploy to Kubernetes
       run: |
         echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml 
+        kubectl apply -f deployment/env-configmap.yml --kubeconfig=kubeconfig.yaml
         kubectl apply -f deployment/deployment.yml --kubeconfig=kubeconfig.yaml
