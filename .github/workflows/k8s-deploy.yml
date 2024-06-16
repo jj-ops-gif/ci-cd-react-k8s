@@ -30,10 +30,16 @@ jobs:
         push: true
         tags: 0987432592345457/test-react:latest
 
-    - name: Set up kubectl
-      uses: azure/setup-kubectl@v2
+    # - name: Set up kubectl
+    #   uses: azure/setup-kubectl@v2
+    #   with:
+    #     version: 'latest'
+
+    - uses: marcofranssen/setup-kubectl@v0.3.0
+      id: kubectl
       with:
-        version: 'latest'
+        kubectl-version: latest
+    - run: echo ${{ steps.kubectl.output.kubectl-version }}
 
     - name: Deploy to Kubernetes
       run: |
