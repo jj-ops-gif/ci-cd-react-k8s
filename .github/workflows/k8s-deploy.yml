@@ -51,8 +51,8 @@ jobs:
 
     - name: Deploy to Kubernetes
       run: |
-        echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
+        # echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
         aws eks update-kubeconfig --name udagram --region us-east-1
-        kubectl config current-context
+        # kubectl config current-context
         kubectl apply -f deployment/deployment.yml 
         # kubectl apply -f deployment/deployment.yml --kubeconfig=kubeconfig.yaml
