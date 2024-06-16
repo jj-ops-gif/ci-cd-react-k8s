@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: ci-cd-react-k8s
-        image: $(CONTAINER_REGISTRY)/$(IMAGE_NAME):latest
+        image: 0987432592345457/test-react:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
