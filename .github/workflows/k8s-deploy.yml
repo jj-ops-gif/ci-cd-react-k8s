@@ -38,10 +38,10 @@ jobs:
     - uses: marcofranssen/setup-kubectl@v0.3.0
       id: kubectl
       with:
-        kubectl-version: latest
+        kubectlVersion: latest
     - run: echo ${{ steps.kubectl.output.kubectl-version }}
 
     - name: Deploy to Kubernetes
       run: |
         echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
-        kubectl apply -f deployment.yml --kubeconfig=kubeconfig.yaml
+        kubectl apply -f deployment/deployment.yml --kubeconfig=kubeconfig.yaml
